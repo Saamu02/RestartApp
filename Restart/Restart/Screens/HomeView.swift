@@ -13,12 +13,13 @@ struct HomeView: View {
     
     @AppStorage("onboarding") var isOnboaringViewActive = false
     
+    @State private var isAnimating = false
+    
     // MARK: BODY
     
     var body: some View {
         
         VStack(spacing: 20) {
-            
             
             // MARK: HEADER
             
@@ -32,6 +33,8 @@ struct HomeView: View {
                     .resizable()
                     .scaledToFit()
                     .padding()
+                    .offset(y: isAnimating ? 35 : -35)
+                    .animation(.easeInOut(duration: 4).repeatForever(), value: isAnimating)
             }
          
             
@@ -65,6 +68,12 @@ struct HomeView: View {
             .buttonBorderShape(.capsule)
             .controlSize(.large)
         }
+        .onAppear(perform: {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                isAnimating = true
+            })
+        })
     }
 }
 
