@@ -19,6 +19,8 @@
 		04A068262C25752100698DAF /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A068252C25752100698DAF /* UIScreen+Extension.swift */; };
 		04E4A0082C245ABC00A4A853 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4A0072C245ABC00A4A853 /* ColorExtension.swift */; };
 		04E6F1BA2C246FD900D7A558 /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6F1B92C246FD900D7A558 /* CircleGroupView.swift */; };
+		04FF5CFB2C25C15F0059E62B /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF5CFA2C25C15F0059E62B /* AudioPlayer.swift */; };
+		04FF5CFD2C25C2690059E62B /* SoundConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF5CFC2C25C2690059E62B /* SoundConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		04A068252C25752100698DAF /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		04E4A0072C245ABC00A4A853 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		04E6F1B92C246FD900D7A558 /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
+		04FF5CFA2C25C15F0059E62B /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		04FF5CFC2C25C2690059E62B /* SoundConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +78,9 @@
 				043E98852C2295550072366B /* Screens */,
 				043E98862C22955C0072366B /* Components */,
 				043E98872C2295630072366B /* Utilities */,
-				043E98762C22930F0072366B /* Assets.xcassets */,
 				043E98822C2293B70072366B /* Sounds */,
 				043E98782C22930F0072366B /* Preview Content */,
+				043E98762C22930F0072366B /* Assets.xcassets */,
 			);
 			path = Restart;
 			sourceTree = "<group>";
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				04E4A0072C245ABC00A4A853 /* ColorExtension.swift */,
+				04FF5CFA2C25C15F0059E62B /* AudioPlayer.swift */,
+				04FF5CFC2C25C2690059E62B /* SoundConstants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -207,6 +213,8 @@
 			files = (
 				043E988A2C2297B80072366B /* OnboardingView.swift in Sources */,
 				04A068262C25752100698DAF /* UIScreen+Extension.swift in Sources */,
+				04FF5CFB2C25C15F0059E62B /* AudioPlayer.swift in Sources */,
+				04FF5CFD2C25C2690059E62B /* SoundConstants.swift in Sources */,
 				043E988C2C2297C10072366B /* HomeView.swift in Sources */,
 				04A068232C25750C00698DAF /* UIWindow+Extension.swift in Sources */,
 				043E98752C22930D0072366B /* ContentView.swift in Sources */,

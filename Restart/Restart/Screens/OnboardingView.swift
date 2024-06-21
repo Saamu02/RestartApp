@@ -19,6 +19,8 @@ struct OnboardingView: View {
     @State private var indicatorOpactiy = 1.0
     @State private var textTitle = "Share."
     
+    let hapticFeedBack = UINotificationFeedbackGenerator()
+    
     // MARK: BODY
     
     var body: some View {
@@ -163,10 +165,13 @@ struct OnboardingView: View {
                                 .onEnded { _ in
                                     
                                     if buttonOffset > buttonWidth / 2 {
+                                        hapticFeedBack.notificationOccurred(.success)
+                                        AudioPlayer.shared.playSound(sound: SoundConstants.chimeupSound)
                                         buttonOffset = buttonWidth - 80
                                         isOnboaringViewActive = false
                                         
                                     } else {
+                                        hapticFeedBack.notificationOccurred(.warning )
                                         buttonOffset = 0
                                     }
                                 }
@@ -185,6 +190,7 @@ struct OnboardingView: View {
         .onAppear(perform: {
              isAnimating = true
         })
+        .preferredColorScheme(.dark)
     }
 }
 

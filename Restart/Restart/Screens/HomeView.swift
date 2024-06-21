@@ -53,6 +53,7 @@ struct HomeView: View {
             Spacer()
             
             Button(action: {
+                AudioPlayer.shared.playSound(sound: SoundConstants.successSound, type: "m4a")
                 isOnboaringViewActive = true
 
             }, label: {
