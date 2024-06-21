@@ -12,6 +12,10 @@ struct OnboardingView: View {
     // MARK: PROPERTIES
     @AppStorage("onboarding") var isOnboaringViewActive = true
     
+    @State private var buttonWidth: Double = (UIScreen.current?.bounds.width)! - 80
+    
+    @State private var buttonOffset: CGFloat = 0
+    
     // MARK: BODY
     
     var body: some View {
@@ -41,7 +45,7 @@ struct OnboardingView: View {
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 10)
-                }
+                } //: HEADER
                 
                 
                 // MARK: CENTER
@@ -52,7 +56,7 @@ struct OnboardingView: View {
                     Image("character-1")
                       .resizable()
                       .scaledToFit()
-                }
+                } //: CENTER
                 
                 Spacer()
                 
@@ -77,7 +81,7 @@ struct OnboardingView: View {
                         
                         Capsule()
                             .fill(Color.customRed)
-                            .frame(width: 80)
+                            .frame(width: buttonOffset + 80)
                         
                         Spacer()
                     }
@@ -99,17 +103,34 @@ struct OnboardingView: View {
                         }
                         .frame(width: 80, height: 80, alignment: .center)
                         .foregroundStyle(.white)
-                        
+                        .offset(x: buttonOffset)
+                        .gesture(
+                            DragGesture()
+                                .onChanged { gesture in
+                                    
+                                    if (gesture.translation.width > 0) && (buttonOffset <= (buttonWidth - 80)) {
+                                        buttonOffset = gesture.translation.width
+                                    }
+                                }
+                                .onEnded { _ in
+                                    
+                                    if buttonOffset > buttonWidth / 2 {
+                                        buttonOffset = buttonWidth - 80
+                                        isOnboaringViewActive = false
+                                        
+                                    } else {
+                                        buttonOffset = 0
+                                    }
+                                }
+                        ) //: GESTURE
+
                         Spacer()
-                    }
-                }
-                .frame(height: 80, alignment: .center)
+                    } //: HSTACK
+                } //: FOOTER
+                .frame(width: buttonWidth, height: 80, alignment: .center)
                 .padding()
-                .onTapGesture {
-                    isOnboaringViewActive = false
-                }
-            }
-        }
+            } //: VSTACK
+        } //: ZSTACK
     }
 }
 

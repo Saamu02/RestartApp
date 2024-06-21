@@ -15,6 +15,8 @@
 		043E98842C2293B70072366B /* success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 043E98812C2293B70072366B /* success.m4a */; };
 		043E988A2C2297B80072366B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E98892C2297B80072366B /* OnboardingView.swift */; };
 		043E988C2C2297C10072366B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E988B2C2297C10072366B /* HomeView.swift */; };
+		04A068232C25750C00698DAF /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A068222C25750C00698DAF /* UIWindow+Extension.swift */; };
+		04A068262C25752100698DAF /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A068252C25752100698DAF /* UIScreen+Extension.swift */; };
 		04E4A0082C245ABC00A4A853 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4A0072C245ABC00A4A853 /* ColorExtension.swift */; };
 		04E6F1BA2C246FD900D7A558 /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6F1B92C246FD900D7A558 /* CircleGroupView.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		043E98882C2297460072366B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		043E98892C2297B80072366B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		043E988B2C2297C10072366B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		04A068222C25750C00698DAF /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		04A068252C25752100698DAF /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		04E4A0072C245ABC00A4A853 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		04E6F1B92C246FD900D7A558 /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +70,7 @@
 			children = (
 				043E98882C2297460072366B /* Info.plist */,
 				043E98722C22930D0072366B /* RestartApp.swift */,
+				04A068212C2574F500698DAF /* Extensions */,
 				043E98852C2295550072366B /* Screens */,
 				043E98862C22955C0072366B /* Components */,
 				043E98872C2295630072366B /* Utilities */,
@@ -117,6 +122,15 @@
 				04E4A0072C245ABC00A4A853 /* ColorExtension.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		04A068212C2574F500698DAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04A068222C25750C00698DAF /* UIWindow+Extension.swift */,
+				04A068252C25752100698DAF /* UIScreen+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +206,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				043E988A2C2297B80072366B /* OnboardingView.swift in Sources */,
+				04A068262C25752100698DAF /* UIScreen+Extension.swift in Sources */,
 				043E988C2C2297C10072366B /* HomeView.swift in Sources */,
+				04A068232C25750C00698DAF /* UIWindow+Extension.swift in Sources */,
 				043E98752C22930D0072366B /* ContentView.swift in Sources */,
 				043E98732C22930D0072366B /* RestartApp.swift in Sources */,
 				04E6F1BA2C246FD900D7A558 /* CircleGroupView.swift in Sources */,
