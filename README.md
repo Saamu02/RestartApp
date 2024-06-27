@@ -27,6 +27,9 @@ https://github.com/Saamu02/RestartApp/assets/126147404/e4cd04c9-bf8c-4cdd-a640-a
 
 
 
+## 
+## 
+
 Note: I am following the tutorials SwiftUI + SwiftData Masterclass - iOS App Development Swift by Robert Petras.
 
 Reference Link: https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/
