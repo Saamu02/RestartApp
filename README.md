@@ -14,7 +14,7 @@ https://github.com/Saamu02/RestartApp/assets/126147404/e4cd04c9-bf8c-4cdd-a640-a
 
 
 
-# Learning Points:
+# Important Points:
 - How to use user defaults in SwiftUI with the help of a property wrapper @AppStorage
    @AppStorage -> a special SwiftUI property wrapper that uses user defaults behind the scenes. It can store value in device’s permanent storage by utilizing a get and set method
 - How to add drag gesture and update the UI accordingly
